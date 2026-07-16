@@ -1,0 +1,22 @@
+cluster_id,num_hexagons,avg_lat,avg_lon,total_daily_ev_demand,total_critical_demand,avg_grid_stress,primary_highway,cluster_label
+0,402,20.74974054726368,77.33236094527363,90272,15185,0.6385074626865672,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),EV Charging Desert Hotspot #1
+5,17,8.508694117647059,77.44141764705883,6365,754,0.42705882352941177,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),EV Charging Desert Hotspot #2
+10,18,22.33505,73.32033333333334,4550,705,0.6294444444444445,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),EV Charging Desert Hotspot #3
+3,10,10.34981,77.4944,4455,529,0.404,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),EV Charging Desert Hotspot #4
+6,17,24.610647058823528,84.52319411764705,1520,507,0.8111764705882353,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),EV Charging Desert Hotspot #5
+4,10,9.46536,77.47398000000001,4133,492,0.40199999999999997,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),EV Charging Desert Hotspot #6
+2,10,11.18901,77.47114,2979,396,0.611,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),EV Charging Desert Hotspot #7
+9,6,21.939116666666667,71.03538333333334,2700,321,0.40166666666666667,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),EV Charging Desert Hotspot #8
+16,7,29.732471428571426,75.66427142857142,2609,309,0.3742857142857143,NH-52 (Sangrur-Indore-Ankleshwar),EV Charging Desert Hotspot #9
+20,6,17.74645,73.58225,2413,286,0.35333333333333333,NH-66 (Panvel-Goa-Mangalore-Kanyakumari Coastal West),EV Charging Desert Hotspot #10
+17,6,29.016383333333334,75.43893333333334,2034,270,0.5433333333333333,NH-52 (Sangrur-Indore-Ankleshwar),EV Charging Desert Hotspot #11
+15,6,25.953466666666667,90.80943333333335,2189,260,0.43166666666666664,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),EV Charging Desert Hotspot #12
+7,6,22.528049999999997,88.16141666666665,2107,250,0.5033333333333333,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),EV Charging Desert Hotspot #13
+1,6,11.7954,77.45306666666666,597,222,0.8116666666666666,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),EV Charging Desert Hotspot #14
+14,6,25.381083333333333,88.0492,572,204,0.7949999999999999,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),EV Charging Desert Hotspot #15
+12,6,24.3212,82.9643,549,178,0.84,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),EV Charging Desert Hotspot #16
+11,7,22.783985714285713,75.43395714285714,495,159,0.79,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),EV Charging Desert Hotspot #17
+13,6,24.9259,85.88456666666667,441,143,0.8066666666666666,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),EV Charging Desert Hotspot #18
+8,6,20.589566666666666,86.69968333333334,428,139,0.8116666666666666,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),EV Charging Desert Hotspot #19
+18,6,24.32518333333333,73.85811666666666,418,138,0.7866666666666666,NH-52 (Sangrur-Indore-Ankleshwar),EV Charging Desert Hotspot #20
+19,4,23.892174999999998,73.71465,372,130,0.785,NH-52 (Sangrur-Indore-Ankleshwar),EV Charging Desert Hotspot #21

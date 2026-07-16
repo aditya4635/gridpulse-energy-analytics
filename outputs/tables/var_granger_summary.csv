@@ -1,0 +1,2 @@
+state_analyzed,var_optimal_lag,granger_f_stat_lag4,granger_p_val_lag4,causal_inference
+Gujarat (State ID 2 - High RE Penetration),4,36.920168022611385,2.3436282904850814e-30,Confirmed: Sudden clean energy ramps & curtailment statistically Granger-cause grid frequency deviations.

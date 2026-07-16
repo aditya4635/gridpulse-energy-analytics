@@ -1,0 +1,26 @@
+hub_rank,hex_id,highway_name,segment_km,lat,lon,daily_ev_demand,critical_demand,grid_stress_index,recommended_config
+1,87601618bffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),2670.0,13.7469,77.4432,622,74,0.54,8x 360kW DC Ultra-Fast + 2 MWh BESS Buffer
+2,873d842b5ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),420.0,26.2615,77.2784,562,67,0.44,8x 360kW DC Ultra-Fast + 2 MWh BESS Buffer
+3,873c16548ffffff,NH-19 (Delhi-Kolkata via Varanasi),750.0,25.4806,82.9727,649,77,0.35,8x 360kW DC Ultra-Fast + 2 MWh BESS Buffer
+4,873c1b340ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),3075.0,25.5024,88.9151,644,77,0.38,8x 360kW DC Ultra-Fast + 2 MWh BESS Buffer
+5,8742ce798ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),450.0,22.153,72.4624,644,77,0.31,8x 360kW DC Ultra-Fast + 2 MWh BESS Buffer
+6,873c1b02dffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),3000.0,25.4308,88.4371,649,77,0.5,8x 360kW DC Ultra-Fast + 2 MWh BESS Buffer
+7,873ca4576ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),1875.0,24.028,81.4373,649,77,0.53,8x 360kW DC Ultra-Fast + 2 MWh BESS Buffer
+8,873c9e325ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),765.0,18.2592,84.6785,647,77,0.37,8x 360kW DC Ultra-Fast + 2 MWh BESS Buffer
+9,8742ce40bffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),420.0,22.2112,72.2176,647,77,0.44,8x 360kW DC Ultra-Fast + 2 MWh BESS Buffer
+10,87608d4aaffffff,NH-66 (Panvel-Goa-Mangalore-Kanyakumari Coastal West),180.0,17.673,73.5609,639,76,0.31,8x 360kW DC Ultra-Fast + 2 MWh BESS Buffer
+11,876095aedffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),1665.0,19.5008,77.3311,638,76,0.54,4x 150kW DC Fast + 1 MWh BESS Buffer
+12,876093c6affffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),1275.0,21.5277,77.3409,634,76,0.33,4x 150kW DC Fast + 1 MWh BESS Buffer
+13,8760848a4ffffff,NH-65 (Pune-Hyderabad-Machilipatnam),435.0,17.4046,77.5115,641,76,0.3,4x 150kW DC Fast + 1 MWh BESS Buffer
+14,8760a34b4ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),2115.0,17.0832,77.3371,633,75,0.6,4x 150kW DC Fast + 1 MWh BESS Buffer
+15,8760357b2ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),3375.0,10.0885,77.5298,625,75,0.38,4x 150kW DC Fast + 1 MWh BESS Buffer
+16,873dae3a8ffffff,NH-19 (Delhi-Kolkata via Varanasi),180.0,27.8638,78.5448,625,75,0.56,4x 150kW DC Fast + 1 MWh BESS Buffer
+17,8742ca9b6ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),525.0,22.2355,72.7929,630,75,0.28,4x 150kW DC Fast + 1 MWh BESS Buffer
+18,8742c202dffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),105.0,21.7218,70.2636,633,75,0.55,4x 150kW DC Fast + 1 MWh BESS Buffer
+19,8742ca85bffffff,NH-52 (Sangrur-Indore-Ankleshwar),1335.0,22.3197,73.2195,627,75,0.5,4x 150kW DC Fast + 1 MWh BESS Buffer
+20,873da3ab0ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),165.0,27.6145,77.1723,625,75,0.28,4x 150kW DC Fast + 1 MWh BESS Buffer
+21,876084460ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),1935.0,17.9394,77.3307,626,75,0.39,4x 150kW DC Fast + 1 MWh BESS Buffer
+22,873da3728ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),240.0,27.2203,77.2081,626,75,0.4,4x 150kW DC Fast + 1 MWh BESS Buffer
+23,873da3b0bffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),135.0,27.8647,77.1955,630,75,0.47,4x 150kW DC Fast + 1 MWh BESS Buffer
+24,873c9e315ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),780.0,18.1611,84.6786,623,74,0.44,4x 150kW DC Fast + 1 MWh BESS Buffer
+25,873cf6db4ffffff,NH-19 (Delhi-Kolkata via Varanasi),1275.0,23.1767,87.0921,619,74,0.38,4x 150kW DC Fast + 1 MWh BESS Buffer

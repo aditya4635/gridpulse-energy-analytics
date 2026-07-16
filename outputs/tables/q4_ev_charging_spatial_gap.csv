@@ -1,0 +1,101 @@
+hex_id,highway_name,segment_km,lat,lon,daily_ev_demand,critical_demand,existing_chargers,total_charging_capacity_kw,unmet_daily_trips_gap,grid_stress_index,criticality_index,highway_priority_rank
+873ca4576ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),1875.0,24.028,81.4373,649,77,0,0,649,0.53,,1
+873c9e325ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),765.0,18.2592,84.6785,647,77,0,0,647,0.37,,1
+8742ce798ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),450.0,22.153,72.4624,644,77,0,0,644,0.31,,1
+876095aedffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),1665.0,19.5008,77.3311,638,76,0,0,638,0.54,,1
+873c16548ffffff,NH-19 (Delhi-Kolkata via Varanasi),750.0,25.4806,82.9727,649,77,1,60,634,0.35,77.0,2
+873c1b02dffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),3000.0,25.4308,88.4371,649,77,1,22,634,0.5,77.0,2
+8742c202dffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),105.0,21.7218,70.2636,633,75,0,0,633,0.55,,1
+876030306ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),3270.0,10.6374,77.4765,648,77,1,22,633,0.47,77.0,2
+8742ce40bffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),420.0,22.2112,72.2176,647,77,1,60,632,0.44,77.0,2
+8742ca9b6ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),525.0,22.2355,72.7929,630,75,0,0,630,0.28,,1
+873c1b340ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),3075.0,25.5024,88.9151,644,77,1,120,629,0.38,77.0,2
+873d86a4cffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),510.0,25.7676,77.1719,642,77,1,22,627,0.48,77.0,2
+8760848a4ffffff,NH-65 (Pune-Hyderabad-Machilipatnam),435.0,17.4046,77.5115,641,76,1,120,626,0.3,76.0,2
+873da3ab0ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),165.0,27.6145,77.1723,625,75,0,0,625,0.28,,1
+87608d4aaffffff,NH-66 (Panvel-Goa-Mangalore-Kanyakumari Coastal West),180.0,17.673,73.5609,639,76,1,120,624,0.31,76.0,2
+873c9e315ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),780.0,18.1611,84.6786,623,74,0,0,623,0.44,,1
+876088ca2ffffff,NH-65 (Pune-Hyderabad-Machilipatnam),30.0,18.3934,74.0223,623,74,0,0,623,0.45,,1
+876093c6affffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),1275.0,21.5277,77.3409,634,76,1,60,619,0.33,76.0,2
+8760a34b4ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),2115.0,17.0832,77.3371,633,75,1,60,618,0.6,75.0,3
+873c9e0a9ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),825.0,17.9879,84.4132,616,73,0,0,616,0.31,,1
+873da4a58ffffff,NH-52 (Sangrur-Indore-Ankleshwar),195.0,29.0325,75.4077,616,73,0,0,616,0.54,,1
+873da3b0bffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),135.0,27.8647,77.1955,630,75,1,60,615,0.47,75.0,3
+8742ca85bffffff,NH-52 (Sangrur-Indore-Ankleshwar),1335.0,22.3197,73.2195,627,75,1,150,612,0.5,75.0,2
+876084460ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),1935.0,17.9394,77.3307,626,75,1,60,611,0.39,75.0,3
+873da3728ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),240.0,27.2203,77.2081,626,75,1,150,611,0.4,75.0,3
+873dae3a8ffffff,NH-19 (Delhi-Kolkata via Varanasi),180.0,27.8638,78.5448,625,75,1,120,610,0.56,75.0,3
+8760357b2ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),3375.0,10.0885,77.5298,625,75,1,120,610,0.38,75.0,3
+876093cc4ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),1245.0,21.7028,77.4052,610,73,0,0,610,0.29,,1
+87601618bffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),2670.0,13.7469,77.4432,622,74,1,60,607,0.54,74.0,4
+87618c4a9ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),1710.0,13.0138,80.2879,620,74,1,22,605,0.59,74.0,2
+873d99316ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),1785.0,23.9101,80.8509,620,74,1,120,605,0.3,74.0,3
+873d84666ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),450.0,26.1529,77.2632,605,72,0,0,605,0.37,,1
+8760956d1ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),1485.0,20.3345,77.3804,605,72,0,0,605,0.33,,1
+873db0c9dffffff,NH-52 (Sangrur-Indore-Ankleshwar),840.0,25.2728,74.2269,605,72,0,0,605,0.6,,1
+876084a99ffffff,NH-65 (Pune-Hyderabad-Machilipatnam),375.0,17.4938,77.0019,620,74,1,22,605,0.42,74.0,3
+873c88b4cffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),165.0,21.5435,87.5754,619,74,1,120,604,0.41,74.0,2
+873cf6db4ffffff,NH-19 (Delhi-Kolkata via Varanasi),1275.0,23.1767,87.0921,619,74,1,150,604,0.38,74.0,4
+873c12d54ffffff,NH-19 (Delhi-Kolkata via Varanasi),825.0,25.0933,83.5177,603,72,0,0,603,0.33,,1
+87608616cffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),1845.0,18.5278,77.4216,617,74,1,60,602,0.37,74.0,4
+8742c3740ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),300.0,21.9671,71.5551,615,73,1,150,600,0.58,73.0,4
+873ce15a2ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),3480.0,25.975,91.5283,615,73,1,22,600,0.3,73.0,4
+8760306edffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),3195.0,11.138,77.4008,615,73,1,60,600,0.37,73.0,5
+8760a359effffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),2100.0,17.0577,77.3662,614,73,1,60,599,0.4,73.0,5
+873c9e466ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),855.0,17.8137,84.2464,611,73,1,22,596,0.56,73.0,3
+873d84b43ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),315.0,26.8558,77.141,596,71,0,0,596,0.52,,1
+8742ce6d5ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),495.0,22.1534,72.6959,610,73,1,150,595,0.33,73.0,4
+873ce6cb2ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),3090.0,25.5338,89.0109,594,71,0,0,594,0.39,,1
+8761986f2ffffff,NH-65 (Pune-Hyderabad-Machilipatnam),795.0,16.38,80.5539,609,73,1,22,594,0.26,73.0,4
+87618c49bffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),1695.0,13.1476,80.2921,592,71,0,0,592,0.46,,1
+8760354c0ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),3390.0,10.1024,77.6217,607,72,1,150,592,0.25,72.0,6
+873ca40a2ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),1920.0,24.1136,81.6516,606,72,1,120,591,0.31,72.0,5
+876095220ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),1590.0,19.7793,77.2898,605,72,1,120,590,0.32,72.0,5
+873db550bffffff,NH-52 (Sangrur-Indore-Ankleshwar),660.0,26.2415,74.5185,590,70,0,0,590,0.35,,1
+873dae31effffff,NH-19 (Delhi-Kolkata via Varanasi),165.0,27.9108,78.5534,602,72,1,120,587,0.58,72.0,5
+876016094ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),2640.0,13.869,77.4533,587,70,0,0,587,0.32,,1
+873d8942effffff,NH-19 (Delhi-Kolkata via Varanasi),615.0,26.031,82.0099,601,72,1,60,586,0.52,72.0,5
+876086708ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),1755.0,19.0047,77.3209,600,72,1,22,585,0.31,72.0,6
+8760a2469ffffff,NH-65 (Pune-Hyderabad-Machilipatnam),495.0,17.2176,78.0748,585,70,0,0,585,0.26,,1
+876088310ffffff,NH-66 (Panvel-Goa-Mangalore-Kanyakumari Coastal West),105.0,18.1969,73.3096,599,71,1,22,584,0.4,71.0,3
+8742c2115ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),75.0,21.7117,70.0761,597,71,1,22,582,0.47,71.0,6
+873d99243ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),1845.0,23.9005,81.203,597,71,1,22,582,0.31,71.0,6
+873d98a83ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),1605.0,23.6514,79.6863,595,71,1,22,580,0.57,71.0,6
+873d98d18ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),1485.0,23.4835,78.9665,593,71,1,22,578,0.5,71.0,6
+876013205ffffff,NH-66 (Panvel-Goa-Mangalore-Kanyakumari Coastal West),750.0,13.9965,75.1388,593,71,1,60,578,0.31,71.0,3
+873d98168ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),1590.0,23.6536,79.5609,592,71,1,22,577,0.3,71.0,6
+8742ca18bffffff,NH-52 (Sangrur-Indore-Ankleshwar),1380.0,21.9428,73.2212,591,70,1,60,576,0.31,70.0,3
+876030605ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),3210.0,11.0881,77.5423,590,70,1,22,575,0.5,70.0,7
+873ce61b5ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),3135.0,25.6615,89.3657,574,68,0,0,574,0.31,,1
+873da3068ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),195.0,27.5196,77.2453,588,70,1,22,573,0.42,70.0,6
+876035249ffffff,NH-66 (Panvel-Goa-Mangalore-Kanyakumari Coastal West),1410.0,9.6019,76.8886,571,68,0,0,571,0.59,,1
+873cabaddffffff,NH-19 (Delhi-Kolkata via Varanasi),1290.0,23.0679,87.0454,585,70,1,60,570,0.59,70.0,6
+876035022ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),3465.0,9.6113,77.5397,570,68,0,0,570,0.41,,1
+876030750ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),3240.0,11.0052,77.535,584,70,1,22,569,0.46,70.0,7
+873d85db4ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),330.0,26.7115,77.3196,583,69,1,60,568,0.36,69.0,7
+876011469ffffff,NH-66 (Panvel-Goa-Mangalore-Kanyakumari Coastal West),855.0,13.1844,75.3365,583,69,1,22,568,0.28,69.0,4
+873c88164ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),225.0,21.2413,87.2386,582,69,1,22,567,0.32,69.0,4
+8742c3564ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),240.0,21.9677,71.0591,582,69,1,60,567,0.4,69.0,7
+873d84609ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),465.0,26.0637,77.2462,582,69,1,150,567,0.46,69.0,8
+873c1679cffffff,NH-19 (Delhi-Kolkata via Varanasi),780.0,25.2376,83.1777,581,69,1,60,566,0.31,69.0,7
+8742c3cc4ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),225.0,21.9858,70.959,565,67,0,0,565,0.44,,1
+873ce6199ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),3165.0,25.6042,89.4872,580,69,1,22,565,0.32,69.0,7
+873da30dbffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),225.0,27.277,77.2495,579,69,1,22,564,0.48,69.0,8
+876026788ffffff,NH-66 (Panvel-Goa-Mangalore-Kanyakumari Coastal West),1500.0,8.9578,77.1891,579,69,1,150,564,0.39,69.0,4
+8760a50c1ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),2460.0,14.8745,77.4619,562,67,0,0,562,0.58,,1
+873db0ce8ffffff,NH-52 (Sangrur-Indore-Ankleshwar),795.0,25.4172,74.3676,577,69,1,22,562,0.58,69.0,4
+876026832ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),3735.0,8.1887,77.5608,575,69,1,60,560,0.32,69.0,8
+876011094ffffff,NH-66 (Panvel-Goa-Mangalore-Kanyakumari Coastal West),870.0,13.1241,75.4053,575,69,1,60,560,0.3,69.0,4
+873c88ba6ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),210.0,21.3716,87.2667,573,68,1,22,558,0.41,68.0,5
+873d98c24ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),1500.0,23.498,79.0094,573,68,1,22,558,0.26,68.0,8
+873c98db1ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),735.0,18.4087,84.8787,572,68,1,22,557,0.39,68.0,5
+873da3696ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),315.0,26.8722,77.2343,572,68,1,60,557,0.52,68.0,9
+87608876bffffff,NH-66 (Panvel-Goa-Mangalore-Kanyakumari Coastal West),75.0,18.4028,73.2911,570,68,1,60,555,0.27,68.0,5
+873cf2c26ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),15.0,22.5197,88.1928,568,68,1,60,553,0.51,68.0,5
+873d98031ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),1560.0,23.4656,79.4389,566,67,1,22,551,0.28,67.0,9
+8742c3723ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),285.0,21.9234,71.3852,550,66,0,0,550,0.52,,1
+8760938a1ffffff,NH-48 (Golden Quadrilateral West: Delhi-Jaipur-Ahmedabad-Mumbai-Bangalore),1305.0,21.3448,77.3388,565,67,1,120,550,0.5,67.0,8
+873c1b346ffffff,NH-27 (East-West Corridor: Porbandar-Jhansi-Muzaffarpur-Guwahati),3060.0,25.4852,88.8869,562,67,1,120,547,0.52,67.0,9
+873d842b5ffffff,NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari),420.0,26.2615,77.2784,562,67,1,60,547,0.44,67.0,10
+876183362ffffff,NH-16 (East Coast: Kolkata-Bhubaneswar-Visakhapatnam-Chennai),1560.0,13.8419,80.9651,561,67,1,22,546,0.25,67.0,6
+873dae2f5ffffff,NH-19 (Delhi-Kolkata via Varanasi),195.0,27.7997,78.758,559,67,1,22,544,0.54,67.0,8
