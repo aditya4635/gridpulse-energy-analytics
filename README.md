@@ -103,13 +103,5 @@ Visit **`http://127.0.0.1:8051/`** in your browser to interact with the executiv
 
 ---
 
-## 💼 Top 1% Resume Bullet Points (`XYZ Formula`)
-
-* **Spearheaded a multi-modal grid resilience and EV infrastructure analytics platform processing 3.5M+ 15-minute SCADA telemetry and hourly weather records across 28 Indian State Electricity Boards**, utilizing Vector Autoregression (VAR) and Granger causality tests ($F > 36, p < 0.001$) to statistically prove that sudden solar/wind curtailment ramps directly drive grid frequency instability across high-renewables corridors.
-* **Synthesized multi-table SQL curtailment root-cause classifiers (`OVERSUPPLY vs TRANSMISSION BOTTLENECK`) and rolling EWMA control charts**, quantifying **₹60,617 Lakhs (`~₹606 Cr`) in clean revenue loss across Rajasthan and Tamil Nadu** and formulating a diurnal peak-shifting strategy via 2 GWh Battery Energy Storage Systems (BESS) to eliminate a **20.5% statutory frequency violation rate during 11 AM - 3 PM solar ramps**.
-* **Formulated and executed a spatial Operations Research optimization engine leveraging H3 hexagonal spatial binning (`resolution 7`), geographic DBSCAN clustering (`21 charging deserts identified`), and a Teitz-Bart $p$-Median facility location algorithm**, selecting the **optimal 25 Ultra-Fast Charging Hubs (`360 kW DC`) along 8 National Highways to resolve 14,200+ unmet daily critical EV trips** while minimizing local grid transformer stress.
-
----
-
 ## 📄 License
 This portfolio project is licensed under the MIT License. See `LICENSE` for details.
