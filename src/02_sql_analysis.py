@@ -1,8 +1,3 @@
-"""
-02_sql_analysis.py — GridPulse Renewable Energy & EV Infrastructure Analytics
-Executes complex SQL queries (Window Functions, Statistical Process Control approximations,
-Multi-table joins, Spatial node aggregation) against SQLite DB and exports CSVs.
-"""
 
 import os
 import sqlite3
@@ -14,9 +9,6 @@ OUTPUT_DIR = "gridpulse_energy_analytics/outputs/tables"
 
 QUERIES = {
     "q1_grid_frequency_deviation_ewma": """
-        -- Query 1: Grid Frequency Deviation Detection via Rolling Window Control Charts
-        -- Identifies 15-minute intervals where grid frequency breaches the ±0.05 Hz statutory band around 50 Hz,
-        -- computing rolling averages and aggregating total duration of instability by state.
         WITH frequency_windows AS (
             SELECT 
                 state_id,
@@ -52,9 +44,6 @@ QUERIES = {
     """,
 
     "q2_renewable_curtailment_weather": """
-        -- Query 2: Renewable Curtailment & Weather Correlation Root-Cause Classification
-        -- Joins generation output with hourly weather profiles to classify why clean power was curtailed
-        -- (e.g. oversupply during peak solar/wind vs transmission bottlenecks) and estimates revenue loss.
         WITH hourly_summary AS (
             SELECT 
                 g.state_id,
@@ -95,8 +84,6 @@ QUERIES = {
     """,
 
     "q3_state_re_integration_scorecard": """
-        -- Query 3: State-Level Renewable Integration & Grid Stability Scorecard
-        -- Ranks states based on renewable capacity share, average frequency volatility, and curtailment intensity.
         WITH state_gen AS (
             SELECT 
                 state_id,
@@ -132,9 +119,6 @@ QUERIES = {
     """,
 
     "q4_ev_charging_spatial_gap": """
-        -- Query 4: Highway EV Charging Demand-Supply Spatial Gap Analysis
-        -- Aggregates H3 hexagonal demand nodes and matches them against existing EV chargers
-        -- to compute local supply deficit and rank priority highway corridors for new station deployment.
         WITH supply_hex AS (
             SELECT 
                 hex_id,
@@ -180,9 +164,6 @@ QUERIES = {
     """,
 
     "q5_peak_demand_generation_gap": """
-        -- Query 5: Peak vs Off-Peak Generation & Demand Deficit Decomposition
-        -- Analyzes 15-minute grid demand dynamics during Evening Peak (6-10 PM) vs Solar Peak (11 AM-3 PM)
-        -- across regions to pinpoint where 2 GWh Battery Energy Storage Systems (BESS) yield highest value.
         WITH time_bins AS (
             SELECT 
                 g.state_id,

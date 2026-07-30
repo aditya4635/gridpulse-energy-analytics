@@ -1,9 +1,3 @@
-"""
-01_generate_data.py — GridPulse Renewable Energy & EV Infrastructure Analytics
-Generates multi-million row synthetic datasets simulating 28 Indian State Electricity Boards,
-15-minute SCADA grid frequency telemetry, hourly weather/irradiance, renewable curtailment,
-and highway EV charging demand/supply spatial nodes.
-"""
 
 import os
 import sqlite3
@@ -16,9 +10,7 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
     print(f"[{datetime.now().strftime('%H:%M:%S')}] Starting GridPulse synthetic data generation...")
     rng = np.random.default_rng(seed)
 
-    # 1. States (~28 Indian States & UTs with installed RE capacities)
     states_data = [
-        # (id, name, region, solar_mw, wind_mw, base_demand_mw, lat, lon)
         (1, "Rajasthan", "North", 18500, 5200, 14500, 27.0, 74.0),
         (2, "Gujarat", "West", 11200, 10800, 19000, 22.3, 71.5),
         (3, "Tamil Nadu", "South", 7800, 10400, 17500, 11.1, 78.7),
@@ -53,11 +45,11 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
         "base_demand_mw", "lat", "lon"
     ])
 
-    # 2. Power Plants (~1,200 major solar and wind farms)
+
     plants_list = []
     plant_id_counter = 1
     for _, st in states_df.iterrows():
-        # Solar plants
+
         n_solar = max(1, int(st["installed_solar_mw"] / 250))
         for p in range(n_solar):
             cap = round(st["installed_solar_mw"] / n_solar + rng.normal(0, 50), 1)
@@ -73,7 +65,7 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
             })
             plant_id_counter += 1
             
-        # Wind plants
+
         if st["installed_wind_mw"] > 0:
             n_wind = max(1, int(st["installed_wind_mw"] / 200))
             for p in range(n_wind):
@@ -91,32 +83,32 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
                 plant_id_counter += 1
     plants_df = pd.DataFrame(plants_list)
 
-    # 3. Weather Hourly (~490,560 rows: 28 states × 730 days × 24 hours)
+
     print(f"[{datetime.now().strftime('%H:%M:%S')}] Generating ~490k hourly weather & solar/wind profile records...")
     start_date = pd.to_datetime("2024-01-01")
     n_days = 730
     hours_range = pd.date_range(start=start_date, periods=n_days * 24, freq="h")
     
-    # Vectorized weather generation across 28 states
+
     n_weather = len(states_df) * len(hours_range)
     state_ids_rep = np.repeat(states_df["state_id"].values, len(hours_range))
     timestamps_rep = np.tile(hours_range.strftime("%Y-%m-%d %H:%M:%S"), len(states_df))
     hours_of_day = np.tile(hours_range.hour, len(states_df))
     months_of_year = np.tile(hours_range.month, len(states_df))
     
-    # Solar irradiance curve (0 outside 6 AM - 6 PM, peaks around 12-2 PM)
+
     solar_base = np.sin(np.pi * (hours_of_day - 6) / 12.0)
     solar_base = np.where((hours_of_day >= 6) & (hours_of_day <= 18), solar_base, 0.0)
     
-    # Cloud cover (higher during monsoon months June-Sep)
+
     monsoon_flag = np.where(np.isin(months_of_year, [6, 7, 8, 9]), 1.0, 0.2)
     cloud_cover = np.clip(rng.beta(2, 5, size=n_weather) * 100.0 * monsoon_flag + rng.normal(0, 10, size=n_weather), 0, 100).round(1)
     
-    # Irradiance (W/m2)
+
     irradiance = (solar_base * 950.0 * (1.0 - cloud_cover / 130.0) + rng.normal(0, 15, size=n_weather)).round(1)
     irradiance = np.clip(irradiance, 0, 1100)
     
-    # Wind speed (m/s) — higher in coastal/western states & monsoon
+
     wind_speed = rng.weibull(2.1, size=n_weather) * 6.5 + (monsoon_flag * 3.5)
     wind_speed = np.clip(wind_speed, 0, 28).round(2)
 
@@ -129,14 +121,13 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
         "temperature_c": (26.0 + 8.0 * solar_base - (cloud_cover / 10.0) + rng.normal(0, 2, size=n_weather)).round(1)
     })
 
-    # 4. Plant Generation & Curtailment Hourly (~980k rows for Solar/Wind state aggregates)
+
     print(f"[{datetime.now().strftime('%H:%M:%S')}] Generating ~980k hourly renewable curtailment & generation panel...")
     state_solar_cap = states_df.set_index("state_id")["installed_solar_mw"].to_dict()
     state_wind_cap = states_df.set_index("state_id")["installed_wind_mw"].to_dict()
     state_demand_base = states_df.set_index("state_id")["base_demand_mw"].to_dict()
     
-    # We create two records per state-hour (1 for SOLAR, 1 for WIND if wind_cap > 0)
-    # To keep code fast and vectorized, we build solar and wind tables separately and concat
+
     solar_df = weather_df[["state_id", "timestamp_hour", "solar_irradiance_w_m2", "cloud_cover_pct"]].copy()
     solar_df["source_type"] = "SOLAR"
     solar_df["installed_mw"] = solar_df["state_id"].map(state_solar_cap)
@@ -145,7 +136,7 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
     wind_df = weather_df[weather_df["state_id"].map(state_wind_cap) > 0][["state_id", "timestamp_hour", "wind_speed_ms"]].copy()
     wind_df["source_type"] = "WIND"
     wind_df["installed_mw"] = wind_df["state_id"].map(state_wind_cap)
-    # Wind power curve approximation
+
     wind_df["potential_gen_mw"] = (wind_df["installed_mw"] * np.clip((wind_df["wind_speed_ms"] - 3.0) / 10.0, 0, 1.0) * 0.90).round(1)
     
     gen_df = pd.concat([
@@ -153,8 +144,7 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
         wind_df[["state_id", "timestamp_hour", "source_type", "potential_gen_mw"]]
     ], ignore_index=True)
     
-    # Calculate curtailment
-    # In Rajasthan (state 1) and Tamil Nadu (state 3), curtailment is high due to grid oversupply during peak hours
+
     is_rj_tn = gen_df["state_id"].isin([1, 3])
     is_peak_gen = gen_df["potential_gen_mw"] > 3000.0
     curtail_factor = np.where(is_rj_tn & is_peak_gen, rng.uniform(0.18, 0.38, size=len(gen_df)), rng.uniform(0.01, 0.06, size=len(gen_df)))
@@ -162,10 +152,9 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
     gen_df["curtailed_mw"] = (gen_df["potential_gen_mw"] * curtail_factor).round(1)
     gen_df["actual_gen_mw"] = (gen_df["potential_gen_mw"] - gen_df["curtailed_mw"]).round(1)
 
-    # 5. Grid Telemetry (~1.96 Million rows: 15-minute grid frequency & demand SCADA records)
+
     print(f"[{datetime.now().strftime('%H:%M:%S')}] Generating ~1.96M 15-minute grid SCADA telemetry rows...")
-    # To keep generation within 20 seconds, we sample 8 states (high renewables vs low) at 15-min intervals for 2 years
-    # 8 states × 730 days × 96 intervals = 560,640 rows (or 16 states = 1,121,280 rows)
+
     sampled_states = states_df[states_df["state_id"].isin([1, 2, 3, 4, 5, 6, 9, 10, 11, 13, 16, 21])].copy()
     timestamps_15m = pd.date_range(start=start_date, periods=n_days * 96, freq="15min")
     
@@ -174,24 +163,21 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
     scada_times = np.tile(timestamps_15m.strftime("%Y-%m-%d %H:%M:%S"), len(sampled_states))
     scada_hours = np.tile(timestamps_15m.hour, len(sampled_states))
     
-    # Base demand with morning and evening peaks
+
     demand_multiplier = 1.0 + 0.25 * np.sin(np.pi * (scada_hours - 6) / 12.0) + np.where((scada_hours >= 18) & (scada_hours <= 22), 0.3, 0.0)
     scada_base_demand = scada_state_ids
-    # Map state base demand
     scada_demand_map = sampled_states.set_index("state_id")["base_demand_mw"].to_dict()
     demand_mw = (np.vectorize(scada_demand_map.get)(scada_state_ids) * demand_multiplier + rng.normal(0, 200, size=n_scada)).round(1)
     
-    # Grid frequency deviation:
-    # Create a fast lookup map for state-hour curtailment
+
     gen_df["hour_key"] = gen_df["timestamp_hour"].str.slice(0, 13)
     state_hour_curtail = gen_df.groupby(["state_id", "hour_key"])["curtailed_mw"].sum().to_dict()
 
-    # Map curtailment into the 15-min SCADA intervals and create causal frequency drops
+
     scada_hour_keys = [t[:13] for t in scada_times]
     mapped_curtail = np.array([state_hour_curtail.get((sid, hk), 0.0) for sid, hk in zip(scada_state_ids, scada_hour_keys)])
     
-    # Simulate causal lag: sudden changes in curtailment (ramp instability) directly impact frequency deviation
-    # f_t = 50.0 - 0.00004 * curtail - AR noise + seasonal peak stress
+
     is_high_re_state = np.isin(scada_state_ids, [1, 2, 3, 4])
     ramp_instability = np.where(is_high_re_state & np.isin(scada_hours, [12, 13, 14, 17, 18]), rng.normal(0, 0.045, size=n_scada), rng.normal(0, 0.015, size=n_scada))
     grid_freq = (50.0 - (mapped_curtail / 18000.0) + ramp_instability).round(4)
@@ -203,7 +189,7 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
         "total_demand_mw": demand_mw
     })
 
-    # 6. EV Infrastructure & Highway Demand Spatial Nodes (~5,000 H3 hexagons)
+
     print(f"[{datetime.now().strftime('%H:%M:%S')}] Generating EV highway charging demand & H3 hexagonal spatial nodes...")
     highways = [
         ("NH-44 (North-South Corridor: Delhi-Agra-Nagpur-Bangalore-Kanyakumari)", 3745, 28.6, 77.2, 8.1, 77.5),
@@ -227,10 +213,10 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
             frac = n / n_nodes
             lat = lats + (late - lats) * frac + rng.normal(0, 0.05)
             lon = lons + (lone - lons) * frac + rng.normal(0, 0.05)
-            # Compute H3 index resolution 7 (~5 km hexagon)
+
             hex_id = h3.latlng_to_cell(lat, lon, 7)
             
-            # Daily EV trips
+
             is_metro_vicinity = 1 if (frac < 0.15 or frac > 0.85 or abs(frac - 0.5) < 0.08) else 0
             daily_trips = int(rng.uniform(180, 650) if is_metro_vicinity else rng.uniform(30, 140))
             critical_demand = int(daily_trips * rng.uniform(0.25, 0.45) if not is_metro_vicinity else daily_trips * 0.12)
@@ -248,7 +234,7 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
                 "grid_stress_index": grid_stress
             })
             
-            # Existing charging stations skew heavily toward metro vicinities
+
             if is_metro_vicinity and rng.random() > 0.3:
                 chargers_list.append({
                     "charger_id": charger_id_counter,
@@ -266,7 +252,7 @@ def generate_gridpulse_database(db_path: str = "gridpulse_energy_analytics/data/
     ev_demand_df = pd.DataFrame(ev_demand_nodes)
     chargers_df = pd.DataFrame(chargers_list)
 
-    # Save to SQLite Database
+
     print(f"[{datetime.now().strftime('%H:%M:%S')}] Writing tables to SQLite database at {db_path}...")
     os.makedirs(os.path.dirname(db_path), exist_ok=True)
     if os.path.exists(db_path):

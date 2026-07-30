@@ -1,8 +1,3 @@
-"""
-04_dashboard.py — GridPulse Renewable Energy & EV Infrastructure Analytics
-Minimalist dark dashboard inspired by Airbnb design system.
-http://127.0.0.1:8051/
-"""
 
 import os
 import sqlite3
